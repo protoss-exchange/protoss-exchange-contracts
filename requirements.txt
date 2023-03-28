@@ -1,0 +1,2 @@
+openzeppelin-cairo-contracts==0.6.1
+cairo-lang==0.10.3
