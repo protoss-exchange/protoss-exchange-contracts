@@ -1,16 +1,21 @@
 [project]
 protostar-version = "0.9.2"
 lib-path = "lib"
-cairo-path = ["./lib/cairo-contracts/src"]
+cairo-path = ["lib/cairo_contracts/src", "lib/helper_contracts/src"]
 account-class-hash = "0x025ec026985a3bf9d0cc1fe17326b245dfdc3ff89b8fde106542a3ea56c5a918"
 account-address-salt = 0x1
-max-fee = 100000000000000
 
 [contracts]
-contract = [
-  "contracts/protoss_erc20.cairo",
+protoss_erc20 = [
+  "contracts/protoss_erc20.cairo"
+]
+protoss_factory = [
   "contracts/protoss_factory.cairo",
-  "contracts/protoss_pair.cairo",
+]
+protoss_pair = [
+  "contracts/protoss_pair.cairo"
+]
+protoss_router = [
   "contracts/protoss_router.cairo"
 ]
 
