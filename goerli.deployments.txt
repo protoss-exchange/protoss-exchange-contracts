@@ -1,2 +1,0 @@
-0x00f7deba952e096ef7cad6b4b0aeddb675377fa86dc60c80290e630a7950df46:/Users/hlxwell/projects/smart-contracts/protoss-exchange-contracts/cairo_venv/lib/python3.9/site-packages/nile/artifacts/abis/Account.json:ARGENT
-0x03d698b4dd4718c613c3b41b9d1a428322ef54ef1b087038c48b255e545bb3f5:artifacts/abis/protoss_pair.json
