@@ -1,5 +1,16 @@
 # Deploy script
 
+## Deploy erc2
+```
+protostar deploy 0x7fa70cb0000b11a608e9ecce75e4617d33342a2a1d6ae5436a2b60990bcc103 \
+  --account-address 0x076b885Ca6e863346774BEaF32f8752db6af9eEBEc2A9CB0D321725Cad6c197e \
+  --max-fee auto \
+  --network testnet \
+  --inputs \
+    0x546f6b656e43
+    0x544f43
+```
+
 ## Deploy pair
 ```
 protostar deploy 0xce61e906700ba8fceb3a7b294dc4369b210807bad75273e59aef856e383b62 \

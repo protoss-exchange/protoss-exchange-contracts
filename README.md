@@ -25,6 +25,12 @@ https://testnet.starkscan.co/contract/0x058e4cf84d5c9d7c6e5f3fdd4d2d7186566f39fa
 ### TokenB, TOB
 https://testnet.starkscan.co/contract/0x0401d06bd0e3e0d2cca6eead7bb20ec5d6ad4f48a27b2ce00e416f89cbd5d011
 
+### TokenC, TOC
+https://testnet.starkscan.co/contract/0x06f5a85cfdadca8a90f7b99c99afd992a149e853a641257db99cf50bc2093ed7
+
+### TokenD, TOD
+https://testnet.starkscan.co/contract/0x055ce6e2c9f7e962ceddce755ac5dbed6415d206d5435631557d1d75c44d3149
+
 ### ProtossPair
 https://testnet.starkscan.co/contract/0x03bbdc7d170a73f0488ca446a3472b04ae9b6bb6413459a7da7c7b00e07f1714
 
@@ -33,3 +39,9 @@ https://testnet.starkscan.co/contract/0x0678950106a6e2d23ed2f38b3b645ea48e994a9d
 
 ### ProtossRouter
 https://testnet.starkscan.co/contract/0x064ee214c54f4e3e43fcca70cb518f6eca85a29548a3eaa2da67fe9ac4a866e4
+
+## Verfiy Contract
+
+Use `starkscan` to verify contract.
+
+`npm install -g starkscan`
