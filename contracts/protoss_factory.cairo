@@ -110,7 +110,7 @@ func createPair{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_pt
     let (token0, token1) = ProtossLibrary.sortTokens(tokenA, tokenB);
 
     // Pair exists
-    with_attr error_message("ProtossSwap: PE") {
+    with_attr error_message("ProtossSwap: Pair Existed") {
         let (pair) = _getPair.read(token0, token1);
         assert pair = 0;
     }
