@@ -1,3 +1,4 @@
+node_modules/
 cairo_venv/
 .DS_Store
 .temp/

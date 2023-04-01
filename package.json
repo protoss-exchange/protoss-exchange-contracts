@@ -1,0 +1,12 @@
+{
+  "name": "protoss-exchange-contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github-protoss:protoss-exchange/protoss-exchange-contracts.git",
+  "author": "James Bond <james@protoss.exchange>",
+  "license": "MIT",
+  "dependencies": {
+    "starknet": "^4.22.0",
+    "@argent/get-starknet": "^3.0"
+  }
+}
