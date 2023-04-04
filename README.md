@@ -26,5 +26,5 @@ Use `starkscan` to verify contract.
 - Factory: https://starkscan.co/class/0x07b2dcbbf952e8668b4ab2afe40b99e6a023d5355f332f27644a0cac6537af48
 
 ### Contract Address
-- Factory: 0x04bd9ec70e3ee64fe0adefe0ae4eff797fe07b6fe19d72438db0b6d336ee77c8
-- Router: 0x07a0922657e550ba1ef76531454cb6d203d4d168153a0f05671492982c2f7741
+- Factory: https://starkscan.co/contract/0x04bd9ec70e3ee64fe0adefe0ae4eff797fe07b6fe19d72438db0b6d336ee77c8
+- Router: https://starkscan.co/contract/0x07a0922657e550ba1ef76531454cb6d203d4d168153a0f05671492982c2f7741
