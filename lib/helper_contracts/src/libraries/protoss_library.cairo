@@ -131,19 +131,20 @@ namespace ProtossLibrary {
         alloc_locals;
 
         // Insufficient input amount
-        with_attr error_message("ProtossSwapLibrary: IIA") {
+        with_attr error_message("ProtossSwapLibrary: Insufficient input amount") {
             let (is_le) = uint256_le(amountIn, Uint256(0, 0));
             assert is_le = FALSE;
         }
 
         // Insufficient liquidity
-        with_attr error_message("ProtossSwapLibrary: IL") {
+        with_attr error_message("ProtossSwapLibrary: Insufficient liquidity") {
             let rIn = is_le_felt(reserveIn, 0);
             let rOut = is_le_felt(reserveOut, 0);
 
             assert (rIn, rOut) = (FALSE, FALSE);
         }
 
+        // 0.3% fee
         let (amountInWithFee : Uint256) = SafeUint256.mul(amountIn, Uint256(997, 0));
         let (numerator : Uint256) = SafeUint256.mul(amountInWithFee, Uint256(reserveOut, 0));
 
@@ -228,7 +229,7 @@ namespace ProtossLibrary {
         alloc_locals;
 
         // Invalid_path
-        with_attr error_message("ProtossSwapLibrary: IP") {
+        with_attr error_message("ProtossSwapLibrary: Invalid path") {
             let le = is_le_felt(2, path_len);
             assert le = TRUE;
         }

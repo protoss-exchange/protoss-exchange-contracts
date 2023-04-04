@@ -299,7 +299,7 @@ func initialize{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_pt
 ) -> () {
     let (factory) = _factory.read();
     let (sender) = get_caller_address();
-    with_attr error_message("ProtossSwap: FB") {
+    with_attr error_message("ProtossSwap: FORBIDDEN") {
         assert factory = sender;
     }
 
@@ -389,7 +389,7 @@ func burn{
     let (amount1) = warp_div256(a1, totalSupply);
 
     // Insufficient liquidity burned
-    with_attr error_message("ProtossSwap: ILB") {
+    with_attr error_message("ProtossSwap: Insufficient liquidity burned") {
         let (r0) = uint256_le(amount0, Uint256(0, 0));
         let (r1) = uint256_le(amount1, Uint256(0, 0));
         assert r0 = FALSE;
@@ -423,7 +423,7 @@ func swap{
     ReentrancyGuard.start();
 
     // Insufficient output amount
-    with_attr error_message("ProtossSwap: IOA") {
+    with_attr error_message("ProtossSwap: Insufficient output amount") {
         // Require amount0Out > 0 || amount1Out > 0
         let (r0) = uint256_le(amount0Out, Uint256(0, 0));
         let (r1) = uint256_le(amount1Out, Uint256(0, 0));
@@ -433,7 +433,7 @@ func swap{
     let (reserve0, reserve1, _) = getReserves();
 
     // Insufficient liquidity
-    with_attr error_message("ProtossSwap: IL") {
+    with_attr error_message("ProtossSwap: Insufficient liquidity") {
         let (r0) = uint256_lt(amount0Out, Uint256(reserve0, 0));
         let (r1) = uint256_lt(amount1Out, Uint256(reserve1, 0));
         assert r0 * r1 = TRUE;
@@ -443,7 +443,7 @@ func swap{
     let (token1) = _token1.read();
 
     // Invalid to
-    with_attr error_message("ProtossSwap: IT") {
+    with_attr error_message("ProtossSwap: Invalid token") {
         if (to == token0) {
             assert 1 = 0;
         }
@@ -465,7 +465,7 @@ func swap{
     let (amount1In : Uint256) = _swap_get_amountIn(balance1, reserve1, amount1Out);
 
     // Insufficient input amount
-    with_attr error_message("ProtossSwap: IIA") {
+    with_attr error_message("ProtossSwap: Insufficient input amount") {
         // Require amount0In > 0 || amount1In > 0
         let (r0) = uint256_le(amount0In, Uint256(0, 0));
         let (r1) = uint256_le(amount1In, Uint256(0, 0));
@@ -568,7 +568,7 @@ func _mint_part1{
     reserve1 : felt,
 ) {
     // Insufficient liquidity minted
-    with_attr error_message("ProtossSwap: ILM") {
+    with_attr error_message("ProtossSwap: Insufficient liquidity minted") {
         let (is_le) = uint256_le(liquidity, Uint256(0, 0));
         assert is_le = FALSE;
     }
@@ -591,7 +591,7 @@ func _update{
     alloc_locals;
 
     // Overflow
-    with_attr error_message("ProtossSwap: OV") {
+    with_attr error_message("ProtossSwap: overflow") {
         let (is_le_0) = uint256_le(balance0, Uint256(Q112 - 1, 0));
         let (is_le_1) = uint256_le(balance1, Uint256(Q112 - 1, 0));
         assert (is_le_0, is_le_1) = (TRUE, TRUE);

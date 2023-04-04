@@ -12,34 +12,6 @@ In this project, we will explore the design and implementation of our smart cont
 
 Overall, our smart contract provides a reliable and efficient way for users to swap tokens on the StarkNet chain. It is a valuable addition to the DeFi ecosystem and represents an important step forward in the development of decentralized financial systems.
 
-## Testnet Contract Address
-
-- Class hash for contract "protoss_erc20": 0x7fa70cb0000b11a608e9ecce75e4617d33342a2a1d6ae5436a2b60990bcc103
-- Class hash for contract "protoss_factory": 0x58762fdf0d0418309c7d2f734a71b54a98a2589c6ec5dc3d393261718e65541
-- Class hash for contract "protoss_pair": 0xce61e906700ba8fceb3a7b294dc4369b210807bad75273e59aef856e383b62
-- Class hash for contract "protoss_router": 0x10fa77505ee3f0ce3d7c751096058d6025a368f4a9812c593790d63540e8c8f
-
-### TokenA, TOA
-https://testnet.starkscan.co/contract/0x058e4cf84d5c9d7c6e5f3fdd4d2d7186566f39fa67bdd1f24f91c41b4c095fcb
-
-### TokenB, TOB
-https://testnet.starkscan.co/contract/0x0401d06bd0e3e0d2cca6eead7bb20ec5d6ad4f48a27b2ce00e416f89cbd5d011
-
-### TokenC, TOC
-https://testnet.starkscan.co/contract/0x06f5a85cfdadca8a90f7b99c99afd992a149e853a641257db99cf50bc2093ed7
-
-### TokenD, TOD
-https://testnet.starkscan.co/contract/0x055ce6e2c9f7e962ceddce755ac5dbed6415d206d5435631557d1d75c44d3149
-
-### ProtossPair
-https://testnet.starkscan.co/contract/0x03bbdc7d170a73f0488ca446a3472b04ae9b6bb6413459a7da7c7b00e07f1714
-
-### ProtossFactory
-https://testnet.starkscan.co/contract/0x0678950106a6e2d23ed2f38b3b645ea48e994a9d009c9aa7f8ef3f8b6434fb5e
-
-### ProtossRouter
-https://testnet.starkscan.co/contract/0x064ee214c54f4e3e43fcca70cb518f6eca85a29548a3eaa2da67fe9ac4a866e4
-
 ## Verfiy Contract
 
 Use `starkscan` to verify contract.

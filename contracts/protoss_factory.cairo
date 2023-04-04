@@ -165,7 +165,7 @@ func _onlyFeeToSetter{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_ch
     let (caller) = get_caller_address();
     let (feeToSetter) = _feeToSetter.read();
     // Forbidden
-    with_attr error_message("ProtossSwap: FB") {
+    with_attr error_message("ProtossSwap: Not feeToSetter") {
         assert feeToSetter = caller;
     }
     return ();

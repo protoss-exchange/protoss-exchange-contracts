@@ -1,5 +1,6 @@
 {
   "localhost": "http://127.0.0.1:5050/",
+  "mainnet": "https://alpha-mainnet.starknet.io",
   "goerli": "https://alpha4.starknet.io",
   "goerli2": "https://alpha4-2.starknet.io",
   "integration": "https://external.integration.starknet.io"

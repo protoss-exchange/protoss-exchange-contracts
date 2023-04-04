@@ -160,13 +160,13 @@ func removeLiquidity{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_che
     let (amountA : Uint256, amountB : Uint256) = _removeLiquidity(tokenA, tokenB, liquidity, to);
 
     // Insufficient_a_amount
-    with_attr error_message("ProtossSwapRouter: IAA") {
+    with_attr error_message("ProtossSwapRouter: Insufficient A amount") {
         let (lt0) = uint256_lt(amountA, amountAMin);
         assert lt0 = FALSE;
     }
 
     // Insufficient_b_amount
-    with_attr error_message("ProtossSwapRouter: IBA") {
+    with_attr error_message("ProtossSwapRouter: Insufficient B amount") {
         let (lt0) = uint256_lt(amountB, amountBMin);
         assert lt0 = FALSE;
     }
@@ -196,7 +196,7 @@ func swapExactTokensForTokens{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, 
     );
 
     // Insufficient output amount
-    with_attr error_message("ProtossSwapRouter: IOA") {
+    with_attr error_message("ProtossSwapRouter: Insufficient output amount") {
         // amounts[amounts_len - 1] >= amountOutMin
         let (le) = uint256_le(amountOutMin, amounts[amounts_len - 1]);
         assert le = TRUE;
@@ -234,7 +234,7 @@ func swapTokensForExactTokens{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, 
     );
 
     // Excessive input amount
-    with_attr error_message("ProtossSwapRouter: EIA") {
+    with_attr error_message("ProtossSwapRouter: Excessive input amount") {
         // amounts[0] <= amountInMax
         let (le) = uint256_le(amounts[0], amountInMax);
         assert le = TRUE;
