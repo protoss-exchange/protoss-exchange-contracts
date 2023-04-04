@@ -17,3 +17,14 @@ Overall, our smart contract provides a reliable and efficient way for users to s
 Use `starkscan` to verify contract.
 
 `npm install -g starkscan`
+
+## Contract Address / Class Hash
+
+### Class Hash
+- Pair: https://starkscan.co/class/0x07f052fb14fc79a77eea424b14ac2126400bed7b4e79b6b01b4dbcf823ec15d0
+- Router: https://starkscan.co/class/0x04e30750c4e203e514b5910ad9702d1525f43a04bb03abef45c30fccf6a3437a
+- Factory: https://starkscan.co/class/0x07b2dcbbf952e8668b4ab2afe40b99e6a023d5355f332f27644a0cac6537af48
+
+### Contract Address
+- Factory: 0x04bd9ec70e3ee64fe0adefe0ae4eff797fe07b6fe19d72438db0b6d336ee77c8
+- Router: 0x07a0922657e550ba1ef76531454cb6d203d4d168153a0f05671492982c2f7741
