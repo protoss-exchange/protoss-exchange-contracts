@@ -139,3 +139,10 @@ dmypy.json
 *.deployments.txt
 
 artifacts
+
+accounts.json
+*.accounts.json
+*.declarations.txt
+*.deployments.txt
+
+DEPLOY.md
