@@ -14,10 +14,10 @@ const tokenCAddress = "0x6f5a85cfdadca8a90f7b99c99afd992a149e853a641257db99cf50b
 const tokenDAddress = "0x55ce6e2c9f7e962ceddce755ac5dbed6415d206d5435631557d1d75c44d3149";
 
 // ProtossFactory
-const factoryAddress = "0x678950106a6e2d23ed2f38b3b645ea48e994a9d009c9aa7f8ef3f8b6434fb5e";
+const factoryAddress = "0x0017b7cdbd6dd86b4b9baf572e040e74bd44b419dcbb6f38a2e936aec9327b8e";
 
 // ProtossRouter
-const routerAddress = "0x064ee214c54f4e3e43fcca70cb518f6eca85a29548a3eaa2da67fe9ac4a866e4";
+const routerAddress = "0x005a25278b5b3d935d5871fe8f8cf824840dd7a9082dcbd5d37ab2e74747b2ed";
 
 
 // const provider = new Provider({ sequencer: { network: 'goerli-alpha' } });
@@ -93,17 +93,12 @@ const createPair = async (tokenA: string, tokenB: string) => {
       calldata: [
         tokenA,
         tokenB,
-        Math.floor((new Date().getTime() + 10000) / 1000),
       ]
     });
 
     // create pair
-    const { transaction_hash: createPairTxHash } = await factory.createPair(tokenA, tokenB, { maxFee: res.suggestedMaxFee } );
+    const { transaction_hash: createPairTxHash } = await factory.createPair(tokenA, tokenB);
     showTxStatus(createPairTxHash);
-
-    // get pair address
-    const pairAddress = await factory.getPair(tokenA, tokenB);
-    console.log("Pair address =", pairAddress);
 }
 
 // //// Solution 1 add liquidity
@@ -140,6 +135,20 @@ const addLiquidity = async (tokenA: string, tokenB: string, amount: string) => {
         Math.floor((new Date().getTime() + 10000) / 1000),
       ]
     });
+
+    //// Solution 1 add liquidity
+    // const { transaction_hash: addLiquidityTxHash } = await router.addLiquidity(
+    //   tokenA,
+    //   tokenB,
+    //   [amount, 0],
+    //   [amount, 0],
+    //   [0, 0],
+    //   [0, 0],
+    //   account.address,
+    //   Math.floor((new Date().getTime() + 100000) / 1000),
+    //   { maxFee: res.suggestedMaxFee }
+    // );
+    // showTxStatus(addLiquidityTxHash);
 
     const executeHash = await account.execute({
       contractAddress: routerAddress,
@@ -261,15 +270,25 @@ const showTxStatus = (txHash: string) => {
     console.log(`https://testnet.starkscan.co/tx/${txHash}`);
 }
 
-//// Testing Call code
+// //// Testing Call code
 // mintToken(tokenAAddress, '1000000000000000000000000');
 // mintToken(tokenBAddress, '1000000000000000000000000');
 // mintToken(tokenCAddress, '1000000000000000000000000');
 // mintToken(tokenDAddress, '1000000000000000000000000');
 
+// createPair(tokenAAddress, tokenBAddress);
+// createPair(tokenAAddress, tokenCAddress);
 // createPair(tokenAAddress, tokenDAddress);
+// createPair(tokenBAddress, tokenCAddress);
 // createPair(tokenBAddress, tokenDAddress);
 // createPair(tokenCAddress, tokenDAddress);
+
+// getPairContractAddress(tokenAAddress, tokenBAddress);
+// getPairContractAddress(tokenAAddress, tokenCAddress);
+// getPairContractAddress(tokenAAddress, tokenDAddress);
+// getPairContractAddress(tokenBAddress, tokenCAddress);
+// getPairContractAddress(tokenBAddress, tokenDAddress);
+// getPairContractAddress(tokenCAddress, tokenDAddress);
 
 // approve(tokenAAddress, routerAddress, uint256.UINT_128_MAX.toString());
 // approve(tokenBAddress, routerAddress, uint256.UINT_128_MAX.toString());
@@ -282,13 +301,6 @@ const showTxStatus = (txHash: string) => {
 // addLiquidity(tokenBAddress, tokenCAddress, '50000000000000000000000');
 // addLiquidity(tokenBAddress, tokenDAddress, '50000000000000000000000');
 // addLiquidity(tokenCAddress, tokenDAddress, '50000000000000000000000');
-
-// getPairContractAddress(tokenAAddress, tokenBAddress);
-// getPairContractAddress(tokenAAddress, tokenCAddress);
-// getPairContractAddress(tokenAAddress, tokenDAddress);
-// getPairContractAddress(tokenBAddress, tokenCAddress);
-// getPairContractAddress(tokenBAddress, tokenDAddress);
-// getPairContractAddress(tokenCAddress, tokenDAddress);
 
 // approveLiquidityAllowance(tokenAAddress, tokenDAddress, '1000000_000000000000000000');
 // const TokenATokenDPair = "0x12028a058439d05115ef58d0885cf8d6a3223b5514ee60d3c87716dab5dab0c"
