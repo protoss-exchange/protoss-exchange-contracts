@@ -38,4 +38,4 @@ Use `starkscan` to verify contract.
 
 ### Contract Address
 - Factory: https://testnet.starkscan.co/contract/0x0017b7cdbd6dd86b4b9baf572e040e74bd44b419dcbb6f38a2e936aec9327b8e
-- Router: https://testnet.starkscan.co/contract/0x005a25278b5b3d935d5871fe8f8cf824840dd7a9082dcbd5d37ab2e74747b2ed
+- Router: https://testnet.starkscan.co/contract/0x02E071Eb551c4B084B751947aD172C3B210176eD2FC679C5e9C2Cc47Db91df2F
